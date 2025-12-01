@@ -102,7 +102,7 @@ export default function PricingPage() {
                         {/* BUTTON */}
                         <div className="mt-8">
                           <a
-                            className="inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)] rounded-full border border-transparent bg-gray-950 shadow-md text-base font-medium whitespace-nowrap text-white hover:bg-gray-800"
+                            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-transparent bg-gray-950 shadow-md text-base font-medium whitespace-nowrap text-white hover:bg-gray-800"
                             href="#"
                           >
                             Start a free trial
@@ -269,7 +269,7 @@ export default function PricingPage() {
                   </td>
                   <td colSpan={3} className="p-0 text-right">
                     <a
-                      className="inline-flex items-center justify-center px-2 py-[calc(--spacing(1.5)-1px)] rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
@@ -286,7 +286,7 @@ export default function PricingPage() {
                     className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
                   >
                     <a
-                      className="inline-flex items-center justify-center px-2 py-[calc(--spacing(1.5)-1px)] rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
@@ -295,7 +295,7 @@ export default function PricingPage() {
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
                     <a
-                      className="inline-flex items-center justify-center px-2 py-[calc(--spacing(1.5)-1px)] rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
@@ -304,7 +304,7 @@ export default function PricingPage() {
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
                     <a
-                      className="inline-flex items-center justify-center px-2 py-[calc(--spacing(1.5)-1px)] rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >

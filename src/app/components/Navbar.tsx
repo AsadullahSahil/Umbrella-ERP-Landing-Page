@@ -6,17 +6,17 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import clsx from "clsx";
 
 const navLinks = [
-  { label: "Pricing", href: "#pricing" },
-  { label: "Company", href: "#company" },
-  { label: "Blog", href: "#blog" },
-  { label: "Login", href: "#login" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Company", href: "/company" },
+  { label: "Blog", href: "/blog" },
+  { label: "Login", href: "/login" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="relative z-50 w-full py-4">
+    <header className="relative z-50 w-full py-4 mt-10">
       {/* Lines */}
       <div className="absolute inset-y-0 left-1/2 -z-10 w-full -translate-x-1/2 pointer-events-none">
         <div className="absolute inset-x-0 top-6 border-t border-black/10"></div>
@@ -36,7 +36,11 @@ export default function Navbar() {
                 className="flex items-center text-xl font-semibold text-gray-900"
               >
                 {/* SVG icon */}
-                <svg width="50" height="34" className="h-9 overflow-visible group transition-all ease-in-out">
+                <svg
+                  width="50"
+                  height="34"
+                  className="h-9 overflow-visible group transition-all ease-in-out"
+                >
                   <g
                     opacity="1"
                     className="transition-transform group-hover:scale-110 duration-500 origin-[17px_17px] ease-in-out"
@@ -118,7 +122,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="hidden md:block ml-8">
-              <Link href="#get-started">
+              <Link href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures">
                 <button className="flex items-center bg-fuchsia-950/35 hover:bg-fuchsia-950/30 text-white px-4 py-2 rounded-full text-sm font-medium transition">
                   Radiant Raises $100M Series A from Tailwind ventures
                   <ChevronRight size={16} />

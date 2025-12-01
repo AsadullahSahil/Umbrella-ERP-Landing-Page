@@ -3,14 +3,6 @@
 export default function LoginPage() {
   return (
     <div className="overflow-hidden bg-gray-50">
-      <div
-        className="absolute -top-[350px] -right-[300px] h-[240px] w-[600px] transform-gpu md:right-0 rotate-[-10deg] rounded-full blur-3xl"
-        style={{
-          background:
-            "linear-gradient(115deg, #fff1be 28%, #ee87cb 70%, #b060ff)",
-        }}
-      ></div>
-
       <div className="isolate flex min-h-dvh items-center justify-center p-6 lg:p-8">
         <div className="w-full max-w-md rounded-xl bg-white shadow-md ring-1 ring-black/5">
           <form action="#" className="p-7 sm:p-11" method="POST">

@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 export default function HomePage() {
   return (
     <>
-      <div className="min-h-screen border bg-gradient-to-br bg-linear-115 from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] sm:bg-linear-145 rounded-3xl pt-12">
+      <div className="min-h-screen border bg-gradient-to-br bg-linear-115 from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] sm:bg-linear-145 rounded-3xl">
         <Navbar />
         <main>
           <Hero />
@@ -58,6 +58,9 @@ export default function HomePage() {
 
       {/* Testimonial Section */}
       <Testimonial />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
