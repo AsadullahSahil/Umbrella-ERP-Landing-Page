@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
-import clsx from "clsx";
 
 const navLinks = [
   { label: "Pricing", href: "/pricing" },

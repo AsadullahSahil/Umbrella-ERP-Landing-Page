@@ -5,10 +5,12 @@ import Sales from "./components/Sales";
 import Outreach from "./components/Outreach";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
+import PartnerLogos from "./components/PartnerLogos";
 
 export default function HomePage() {
   return (
     <>
+      {/* Gradient Wrapper */}
       <div className="min-h-screen border bg-gradient-to-br bg-linear-115 from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] sm:bg-linear-145 rounded-3xl">
         <Navbar />
         <main>
@@ -17,35 +19,7 @@ export default function HomePage() {
       </div>
 
       {/* Partner Logos (Outside gradient) */}
-      <div className="mx-auto max-w-2xl lg:max-w-7xl mt-10 px-6 lg:px-8">
-        <div className="flex justify-between max-sm:mx-auto max-sm:max-w-md max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4">
-          <img
-            src="https://radiant.tailwindui.com/logo-cloud/savvycal.svg"
-            alt="SavvyCal"
-            className="h-9 sm:h-8 lg:h-12"
-          />
-          <img
-            src="https://radiant.tailwindui.com/logo-cloud/laravel.svg"
-            alt="Laravel"
-            className="h-9 sm:h-8 lg:h-12"
-          />
-          <img
-            src="https://radiant.tailwindui.com/logo-cloud/tuple.svg"
-            alt="Tuple"
-            className="h-9 sm:h-8 lg:h-12"
-          />
-          <img
-            src="https://radiant.tailwindui.com/logo-cloud/transistor.svg"
-            alt="Transistor"
-            className="h-9 sm:h-8 lg:h-12"
-          />
-          <img
-            src="https://radiant.tailwindui.com/logo-cloud/statamic.svg"
-            alt="Statamic"
-            className="h-9 sm:h-8 lg:h-12"
-          />
-        </div>
-      </div>
+      <PartnerLogos />
 
       {/* Snapshot Section */}
       <Snapshot />

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 
 export default function Snapshot() {
   return (
@@ -12,10 +12,12 @@ export default function Snapshot() {
         <div className="mt-16 w-[1216px] h-[768px] relative aspect-[1218/768]">
           <div className="absolute -inset-2 rounded-lg shadow-xs ring-1 ring-black/5 p-4 "></div>
 
-          <img
-            alt=""
+          <Image
             src="https://radiant.tailwindui.com/screenshots/app.png"
+            alt="Snapshot of sales pipeline dashboard"
+            fill
             className="h-full rounded-lg shadow-2xl ring-1 ring-black/10"
+            priority
           />
         </div>
       </section>
