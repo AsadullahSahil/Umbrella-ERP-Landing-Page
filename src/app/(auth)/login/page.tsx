@@ -1,5 +1,3 @@
-"use client";
-
 export default function LoginPage() {
   return (
     <div className="overflow-hidden bg-gray-50">

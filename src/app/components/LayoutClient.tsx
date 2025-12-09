@@ -12,7 +12,7 @@ export default function LayoutClient({
   const pathname = usePathname();
 
   // pages where the layout navbar/footer should be hidden
-  const hideOn = ["/", "/login"]; // add more if needed
+  const hideOn = ["/", "/login"];
 
   const hideLayout = hideOn.includes(pathname);
 

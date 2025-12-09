@@ -1,91 +1,7 @@
 import CountUp from "../components/CountUp";
-
-const teamMembers = [
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: "https://radiant.tailwindui.com/team/michael-foster.jpg",
-  },
-  {
-    name: "Dries Vincent",
-    role: "Business Relations",
-    image: "https://radiant.tailwindui.com/team/dries-vincent.jpg",
-  },
-  {
-    name: "Celeste Vandermark",
-    role: "Front-end Developer",
-    image: "https://radiant.tailwindui.com/team/celeste-vandermark.jpg",
-  },
-  {
-    name: "Courtney Henry",
-    role: "Designer",
-    image: "https://radiant.tailwindui.com/team/courtney-henry.jpg",
-  },
-  {
-    name: "Marcus Eldridge",
-    role: "Director of Product",
-    image: "https://radiant.tailwindui.com/team/marcus-eldridge.jpg",
-  },
-  {
-    name: "Whitney Francis",
-    role: "Copywriter",
-    image: "https://radiant.tailwindui.com/team/whitney-francis.jpg",
-  },
-  {
-    name: "Leonard Krasner",
-    role: "Senior Designer",
-    image: "https://radiant.tailwindui.com/team/leonard-krasner.jpg",
-  },
-  {
-    name: "Nolan Sheffield",
-    role: "Principal Designer",
-    image: "https://radiant.tailwindui.com/team/nolan-sheffield.jpg",
-  },
-  {
-    name: "Emily Selman",
-    role: "VP, User Experience",
-    image: "https://radiant.tailwindui.com/team/emily-selman.jpg",
-  },
-];
-
-const individualInvestors = [
-  {
-    name: "Kristin Watson",
-    role: "TechNexus Ventures",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/kristin-watson.jpg",
-  },
-  {
-    name: "Emma Dorsey",
-    role: "Innovate Capital Partners",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/emma-dorsey.jpg",
-  },
-  {
-    name: "Alicia Bell",
-    role: "FutureWave Investments",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/alicia-bell.jpg",
-  },
-  {
-    name: "Jenny Wilson",
-    role: "SynergyTech Equity",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/jenny-wilson.jpg",
-  },
-  {
-    name: "Anna Roberts",
-    role: "NextGen Horizons",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/anna-roberts.jpg",
-  },
-  {
-    name: "Benjamin Russel",
-    role: "Pioneer Digital Ventures",
-    image:
-      "https://radiant.tailwindui.com/individual-investors/benjamin-russel.jpg",
-  },
-];
+import { teamMembers, individualInvestors } from "./data";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Company() {
   return (
@@ -137,34 +53,38 @@ export default function Company() {
               <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
                 <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
                   {/* image 1 */}
-                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-                    <img
+                  <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+                    <Image
                       alt=""
-                      className="block size-full object-cover"
+                      fill
+                      className="object-cover"
                       src="https://radiant.tailwindui.com/company/1.jpg"
                     />
                   </div>
                   {/* image 2 */}
-                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-                    <img
+                  <div className="relative -mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
+                    <Image
                       alt=""
-                      className="block size-full object-cover"
+                      fill
+                      className="object-cover"
                       src="https://radiant.tailwindui.com/company/2.jpg"
                     />
                   </div>
                   {/* image 3 */}
-                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-                    <img
+                  <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+                    <Image
                       alt=""
-                      className="block size-full object-cover"
+                      fill
+                      className="object-cover"
                       src="https://radiant.tailwindui.com/company/3.jpg"
                     />
                   </div>
                   {/* image 4 */}
-                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-                    <img
+                  <div className="relative -mt-8 aspect-square min-h-[260px] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
+                    <Image
                       alt=""
-                      className="block size-full object-cover"
+                      fill
+                      className="object-cover"
                       src="https://radiant.tailwindui.com/company/4.jpg"
                     />
                   </div>
@@ -252,21 +172,21 @@ export default function Company() {
                   customers, all through a single integrated platform.
                 </p>
                 <div className="mt-6">
-                  <a
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-full border border-transparent bg-gray-950 shadow-md text-base font-medium whitespace-nowrap text-white data-disabled:bg-gray-950 data-disabled:opacity-40 data-hover:bg-gray-800"
-                    data-headlessui-state=""
+                  <Link
                     href="#"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-full border border-transparent bg-gray-950 shadow-md text-base font-medium whitespace-nowrap text-white data-disabled:bg-gray-950 data-disabled:opacity-40 hover:bg-gray-800"
                   >
                     Join us
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="max-lg:order-first max-lg:max-w-lg">
-                <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-                  <img
+                <div className="relative aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+                  <Image
                     alt=""
-                    className="block size-full object-cover"
+                    fill
+                    className="object-cover"
                     src="https://radiant.tailwindui.com/company/5.jpg"
                   />
                 </div>
@@ -318,10 +238,12 @@ export default function Company() {
               className="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2"
             >
               <li>
-                <img
-                  alt="Remington Schwartz"
-                  className="h-14"
+                <Image
                   src="https://radiant.tailwindui.com/investors/remington-schwartz.svg"
+                  alt="Remington Schwartz"
+                  width={200} 
+                  height={56} 
+                  className="h-14 w-auto"
                 />
                 <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
                   Remington Schwartz has been a driving force in the tech
@@ -332,9 +254,11 @@ export default function Company() {
                 </p>
               </li>
               <li>
-                <img
+                <Image
                   alt="Deccel"
-                  className="h-14"
+                  width={200}
+                  height={56}
+                  className="h-14 w-auto"
                   src="https://radiant.tailwindui.com/investors/deccel.svg"
                 />
                 <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
@@ -404,6 +328,7 @@ export default function Company() {
                       </tr>
                     </thead>
                     <tbody>
+                      {/* Engineering */}
                       <tr>
                         <th
                           scope="colgroup"
@@ -419,41 +344,40 @@ export default function Company() {
                         <td className="px-0 py-4">iOS Developer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
                         <td className="px-0 py-4">Backend Engineer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
                         <td className="px-0 py-4">Product Engineer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
+
+                      {/* Design */}
                       <tr>
                         <th
                           scope="colgroup"
@@ -469,39 +393,36 @@ export default function Company() {
                         <td className="px-0 py-4">Principal Designer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
                         <td className="px-0 py-4">Designer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
                         <td className="px-0 py-4">Senior Designer</td>
                         <td className="px-0 py-4 text-gray-600">Remote</td>
                         <td className="px-0 py-4 text-right">
-                          <a
-                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                            data-headlessui-state=""
+                          <Link
                             href="#"
+                            className="inline-flex items-center justify-center px-2 py-2 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                           >
                             View listing
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                     </tbody>
@@ -510,13 +431,13 @@ export default function Company() {
               </div>
 
               <div className="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
-                <img
+                <Image
                   alt=""
+                  fill
                   className="absolute inset-0 object-cover"
                   src="https://radiant.tailwindui.com/testimonials/veronica-winton.jpg"
-                ></img>
+                />
                 <div
-                  aria-hidden="true"
                   className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-transparent to-75% ring-1 ring-gray-950/10 ring-inset lg:from-25%"
                 ></div>
                 <figure className="relative p-10">

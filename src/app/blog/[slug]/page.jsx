@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-// Import your blog posts list (same array you used in blog.jsx)
 import { blogCards } from "../data";
-
-// Or if you're not using data.js, replace with blogCards array:
-// import { blogCards as blogCards } from "../page";
 
 export default function BlogSlugPage({ params }) {
   const { slug } = params;
@@ -46,11 +42,14 @@ export default function BlogSlugPage({ params }) {
               {/* LEFT COLUMN */}
               <div className="flex flex-wrap items-center gap-8 max-lg:justify-between lg:flex-col lg:items-start">
                 <div className="flex items-center gap-3">
-                  <img
-                    alt={post.author}
-                    src={post.authorImg}
-                    className="aspect-square size-6 rounded-full object-cover"
-                  />
+                  <div className="relative size-6">
+                    <Image
+                      src={post.authorImg}
+                      alt={post.author}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
                   <div className="text-sm/5 text-gray-700">{post.author}</div>
                 </div>
 
@@ -70,11 +69,15 @@ export default function BlogSlugPage({ params }) {
               <div className="text-gray-700">
                 <div className="max-w-2xl xl:mx-auto">
                   {/* Top Image */}
-                  <img
-                    src={post.image}
-                    alt=""
-                    className="mb-10 aspect-3/2 w-full rounded-2xl object-cover shadow-xl"
-                  />
+                  <div className="relative mb-10 aspect-[3/2] w-full rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                      src={post.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
                   {/* Content */}
                   <div
                     className="prose prose-gray max-w-none"

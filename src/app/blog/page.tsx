@@ -51,7 +51,7 @@ export default function BlogPage() {
               "linear-gradient(115deg, #fff1be 28%, #ee87cb 70%, #b060ff)",
           }}
         ></div>
-        
+
         {/* Heading */}
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -83,11 +83,15 @@ export default function BlogPage() {
                       key={post.slug}
                       className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md ring-1 shadow-black/5 ring-black/5"
                     >
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="aspect-3/2 w-full rounded-2xl object-cover"
-                      />
+                      {/* Post image */}
+                      <div className="relative aspect-[3/2] w-full">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="rounded-2xl object-cover"
+                        />
+                      </div>
 
                       <div className="flex flex-1 flex-col p-8">
                         <div className="text-sm text-gray-700">{post.date}</div>
@@ -104,11 +108,14 @@ export default function BlogPage() {
                         </div>
 
                         <div className="mt-6 flex items-center gap-3">
-                          <img
-                            src={post.authorImg}
-                            alt={post.author}
-                            className="size-6 rounded-full object-cover"
-                          />
+                          <div className="relative size-6">
+                            <Image
+                              src={post.authorImg}
+                              alt={post.author}
+                              fill
+                              className="rounded-full object-cover"
+                            />
+                          </div>
                           <div className="text-sm text-gray-700">
                             {post.author}
                           </div>
@@ -141,12 +148,12 @@ export default function BlogPage() {
                 </svg>
               </button>
 
-              <a
+              <Link
                 href="/blog/feed.xml"
                 className="inline-flex items-center px-2 py-1 rounded-lg ring-1 ring-black/10 text-sm font-medium"
               >
                 RSS Feed
-              </a>
+              </Link>
             </div>
 
             {/* Category Posts */}
@@ -160,11 +167,14 @@ export default function BlogPage() {
                     <div className="text-sm text-gray-700">{post.date}</div>
 
                     <div className="mt-2.5 flex items-center gap-3">
-                      <img
-                        src={post.authorImg}
-                        alt={post.author}
-                        className="size-6 rounded-full object-cover"
-                      />
+                      <div className="relative size-6">
+                        <Image
+                          src={post.authorImg}
+                          alt={post.author}
+                          fill
+                          className="rounded-full object-cover"
+                        />
+                      </div>
                       <div className="text-sm text-gray-700">{post.author}</div>
                     </div>
                   </div>

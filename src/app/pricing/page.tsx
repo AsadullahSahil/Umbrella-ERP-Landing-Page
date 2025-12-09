@@ -1,4 +1,6 @@
 import React from "react";
+import PartnerLogos from "../components/PartnerLogos";
+import { Link } from "lucide-react";
 
 const pricingPlans = [
   {
@@ -147,34 +149,8 @@ export default function PricingPage() {
               </div>
 
               {/* Partner Logos (Outside gradient) */}
-              <div className="mx-auto max-w-2xl lg:max-w-7xl mt-24 px-6 lg:px-8">
-                <div className="flex justify-between max-sm:mx-auto max-sm:max-w-md max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4">
-                  <img
-                    src="https://radiant.tailwindui.com/logo-cloud/savvycal.svg"
-                    alt="SavvyCal"
-                    className="h-9 sm:h-8 lg:h-12"
-                  />
-                  <img
-                    src="https://radiant.tailwindui.com/logo-cloud/laravel.svg"
-                    alt="Laravel"
-                    className="h-9 sm:h-8 lg:h-12"
-                  />
-                  <img
-                    src="https://radiant.tailwindui.com/logo-cloud/tuple.svg"
-                    alt="Tuple"
-                    className="h-9 sm:h-8 lg:h-12"
-                  />
-                  <img
-                    src="https://radiant.tailwindui.com/logo-cloud/transistor.svg"
-                    alt="Transistor"
-                    className="h-9 sm:h-8 lg:h-12"
-                  />
-                  <img
-                    src="https://radiant.tailwindui.com/logo-cloud/statamic.svg"
-                    alt="Statamic"
-                    className="h-9 sm:h-8 lg:h-12"
-                  />
-                </div>
+              <div className="mt-24">
+                <PartnerLogos />
               </div>
             </div>
           </div>
@@ -268,13 +244,13 @@ export default function PricingPage() {
                     </div>
                   </td>
                   <td colSpan={3} className="p-0 text-right">
-                    <a
+                    <Link
                       className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
                       Get started
-                    </a>
+                    </Link>
                   </td>
                 </tr>
                 <tr className="max-sm:hidden">
@@ -285,22 +261,22 @@ export default function PricingPage() {
                     data-selected="true"
                     className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
                   >
-                    <a
+                    <Link
                       className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
                       Get started
-                    </a>
+                    </Link>
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
-                    <a
+                    <Link
                       className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
                       data-headlessui-state=""
                       href="#"
                     >
                       Get started
-                    </a>
+                    </Link>
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
                     <a
