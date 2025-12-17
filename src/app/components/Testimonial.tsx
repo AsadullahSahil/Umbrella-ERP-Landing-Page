@@ -64,7 +64,7 @@ export default function Testimonial() {
   
 
   return (
-    <section className="overflow-hidden py-32 bg-white dark:bg-gray-950">
+    <section className="overflow-hidden pb-32 bg-white dark:bg-gray-950">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           {/* Heading */}
@@ -78,7 +78,7 @@ export default function Testimonial() {
           {/* Cards Row */}
           <div className="relative mt-16">
             <motion.div
-              className="flex gap-6 w-max"
+              className="flex gap-6 w-max bg-white dark:bg-gray-950"
               animate={{ x: -index * (cardWidth + gap) }}
               transition={{ type: "spring", stiffness: 120, damping: 20 }}
             >
@@ -109,7 +109,7 @@ export default function Testimonial() {
                         <p className="text-sm font-medium text-white">
                           {item.name}
                         </p>
-                        <p className="text-sm font-medium bg-gradient-to-r from-yellow-200 via-pink-400 to-purple-500 bg-clip-text text-transparent">
+                        <p className="text-sm font-medium bg-gradient-to-r from-[#fff1be] via-[#5A22CC] to-[#E5E7EB] bg-clip-text text-transparent">
                           {item.role}
                         </p>
                       </figcaption>
@@ -131,7 +131,7 @@ export default function Testimonial() {
                   <div className="mt-2">
                     <Link
                       href="/"
-                      className="inline-flex items-center gap-2 text-sm leading-6 font-medium text-pink-600"
+                      className="inline-flex items-center gap-2 text-sm leading-6 font-medium text-[#6F2DF7]"
                     >
                       Get started
                       <svg

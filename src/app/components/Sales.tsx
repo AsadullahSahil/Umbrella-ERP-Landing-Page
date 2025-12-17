@@ -2,42 +2,42 @@
 
 const salesCards = [
   {
-    title: "Insight",
-    subtitle: "Get perfect clarity",
-    text: "Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more.",
-    image: "/screenshots/profile.png",
+    title: "Optimize. Perform. Grow.",
+    subtitle: "Business Consultancy",
+    text: "Umbrella ERP provides expert consultancy to streamline processes, enhance performance, and drive innovation, empowering businesses to achieve their goals.",
+    image: "/business-consultancy.jpg",
     colSpan: "lg:col-span-3",
     rounded: "lg:rounded-tr-4xl",
   },
   {
-    title: "Analysis",
-    subtitle: "Undercut your competitors",
-    text: "With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged.",
-    image: "/screenshots/competitors.png",
+    title: "Modular & Scalable Systems",
+    subtitle: "ERP Solutions",
+    text: "Umbrella ERP delivers modular, user-friendly solutions to streamline operations, boost efficiency, and drive growth. Tailored to your needs, our systems empower businesses to excel.",
+    image: "/erp-solution.jpg",
     colSpan: "lg:col-span-3",
     rounded: "lg:rounded-tr-4xl",
   },
   {
-    title: "Speed",
-    subtitle: "Built for power users",
-    text: "It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts.",
-    image: "/screenshots/competitors.png",
+    title: "Align Strategy with Execution",
+    subtitle: "Strategic Management",
+    text: "Umbrella ERP provides expert strategic management services, helping businesses align goals, optimize resources, and achieve sustainable growth in a dynamic market.",
+    image: "/strategic-management.jpg",
     colSpan: "lg:col-span-2",
     rounded: "lg:rounded-bl-4xl",
   },
   {
-    title: "Source",
-    subtitle: "Get the furthest reach",
-    text: "Bypass those inconvenient privacy laws to source leads from the most unexpected places.",
-    image: "/screenshots/competitors.png",
+    title: "Smarter Workflows",
+    subtitle: "Process Optimization",
+    text: "We analyze and redesign business processes to eliminate inefficiencies, improve productivity, and maximize operational performance.",
+    image: "/process-optimization.jpg",
     colSpan: "lg:col-span-2",
     rounded: "lg:rounded-bl-4xl",
   },
   {
-    title: "Limitless",
-    subtitle: "Sell globally",
-    text: "Radiant helps you sell in locations currently under international embargo.",
-    image: "/screenshots/competitors.png",
+    title: "Future-Ready Businesses",
+    subtitle: "Digital Transformation",
+    text: "Umbrella ERP helps organizations embrace digital transformation through modern systems, automation, and data-driven decision-making.",
+    image: "/digital-transformation.jpg",
     colSpan: "lg:col-span-2",
     rounded: "lg:rounded-bl-4xl",
   },
@@ -48,10 +48,10 @@ export default function Sales() {
     <>
       <section className="overflow-hidden mx-auto max-w-2xl lg:max-w-7xl pb-24 px-6 lg:px-8 bg-linear-to-b from-white from-50% to-gray-100 py-[100px]">
         <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">
-          Sales
+          Our Services
         </h2>
         <h3 className="mt-2 max-w-3xl text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-6xl">
-          Know more about your customers than they do.
+          Streamlined ERP and consulting for long-term growth.
         </h3>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -63,11 +63,11 @@ export default function Sales() {
               {/* Image Section */}
               <div className="relative h-80 shrink-0">
                 <div
-                  className="h-80 bg-no-repeat [background-size:1100px_650px] [background-position:left_-38px_top_-73px]"
+                  className="h-80 bg-no-repeat bg-cover bg-center"
                   style={{ backgroundImage: `url('${card.image}')` }}
                 ></div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent group-data-dark:from-gray-800/90 rounded-lg"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent group-data-dark:from-gray-800/90 rounded-lg"></div> */}
               </div>
 
               {/* Content Section */}

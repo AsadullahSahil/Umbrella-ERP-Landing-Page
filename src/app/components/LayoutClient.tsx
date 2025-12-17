@@ -18,7 +18,7 @@ export default function LayoutClient({
 
   return (
     <>
-      {!hideLayout && <Navbar />}
+      {!hideLayout && <Navbar variant="dark"/>}
       {children}
       {!hideLayout && <Footer />}
     </>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 
@@ -11,17 +12,40 @@ const navLinks = [
   { label: "Login", href: "/login" },
 ];
 
-export default function Navbar() {
+export default function Navbar({
+  variant = "light",
+  showCta = false,
+}: {
+  variant?: "light" | "dark";
+  showCta?: boolean;
+}) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const isDark = variant === "dark";
 
   return (
     <header className="relative z-50 w-full py-4 mt-10">
       {/* Lines */}
       <div className="absolute inset-y-0 left-1/2 -z-10 w-full -translate-x-1/2 pointer-events-none">
-        <div className="absolute inset-x-0 top-6 border-t border-black/10"></div>
-        <div className="absolute inset-x-0 top-8 border-t border-black/10"></div>
-        <div className="absolute inset-x-0 bottom-6 border-b border-black/10 group-last/row:block"></div>
-        <div className="absolute inset-x-0 bottom-8 border-b border-black/10 group-last/row:block"></div>
+        <div
+          className={`absolute inset-x-0 top-6 border-t  ${
+            isDark ? "border-black/10" : "border-[#ececeb]/10"
+          }`}
+        ></div>
+        <div
+          className={`absolute inset-x-0 top-8 border-t  ${
+            isDark ? "border-black/10" : "border-[#ececeb]/10"
+          }`}
+        ></div>
+        <div
+          className={`absolute inset-x-0 bottom-6 border-b group-last/row:block ${
+            isDark ? "border-black/10" : "border-[#ececeb]/10"
+          }`}
+        ></div>
+        <div
+          className={`absolute inset-x-0 bottom-8 border-b group-last/row:block ${
+            isDark ? "border-black/10" : "border-[#ececeb]/10"
+          }`}
+        ></div>
       </div>
 
       <nav className="relative mx-auto max-w-7xl px-4 py-4">
@@ -34,55 +58,15 @@ export default function Navbar() {
                 href="/"
                 className="flex items-center text-xl font-semibold text-gray-900"
               >
-                {/* SVG icon */}
-                <svg
-                  width="50"
-                  height="34"
-                  className="h-9 overflow-visible group transition-all ease-in-out"
-                >
-                  <g
-                    opacity="1"
-                    className="transition-transform group-hover:scale-110 duration-500 origin-[17px_17px] ease-in-out"
-                  >
-                    <path d="M19.5986 18.5005C18.7702 19.9354 16.9354 20.427 15.5005 19.5986C14.0656 18.7701 13.574 16.9354 14.4024 15.5005C15.2309 14.0656 17.0656 13.574 18.5005 14.4024C19.9354 15.2308 20.427 17.0656 19.5986 18.5005Z"></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    className="transition-transform group-hover:scale-110 duration-600 origin-[17px_17px] ease-in-out"
-                  >
-                    <path d="M23.2324 10.2074C22.6801 11.1639 21.4569 11.4917 20.5003 10.9394C19.5437 10.3871 19.216 9.16395 19.7683 8.20736C20.3205 7.25078 21.5437 6.92303 22.5003 7.47531C23.4569 8.0276 23.7846 9.25078 23.2324 10.2074Z"></path>
-                    <path d="M19.7683 25.7933C19.216 24.8367 19.5437 23.6135 20.5003 23.0612C21.4569 22.5089 22.6801 22.8367 23.2324 23.7933C23.7847 24.7498 23.4569 25.973 22.5003 26.5253C21.5437 27.0776 20.3206 26.7498 19.7683 25.7933Z"></path>
-                    <path d="M26 19C24.8954 19 24 18.1046 24 17C24 15.8955 24.8954 15 26 15C27.1046 15 28 15.8955 28 17C28 18.1046 27.1046 19 26 19Z"></path>
-                    <path d="M14.2324 25.7933C13.6801 26.7499 12.4569 27.0777 11.5003 26.5254C10.5437 25.9731 10.216 24.7499 10.7683 23.7933C11.3205 22.8367 12.5437 22.509 13.5003 23.0613C14.4569 23.6136 14.7846 24.8367 14.2324 25.7933Z"></path>
-                    <path d="M10.7682 10.2073C10.216 9.25078 10.5437 8.0276 11.5003 7.47532C12.4569 6.92303 13.6801 7.25078 14.2323 8.20737C14.7846 9.16395 14.4569 10.3871 13.5003 10.9394C12.5437 11.4917 11.3205 11.1639 10.7682 10.2073Z"></path>
-                    <path d="M8 19C6.89543 19 6 18.1045 6 17C6 15.8954 6.89543 15 8 15C9.10457 15 10 15.8954 10 17C10 18.1045 9.10457 19 8 19Z"></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    className="transition-transform group-hover:scale-110 duration-700 origin-[17px_17px] ease-in-out"
-                  >
-                    <path d="M25.8662 3.6447C25.5901 4.12299 24.9785 4.28686 24.5002 4.01072C24.0219 3.73458 23.858 3.12299 24.1342 2.6447C24.4103 2.1664 25.0219 2.00253 25.5002 2.27867C25.9785 2.55481 26.1424 3.1664 25.8662 3.6447Z"></path>
-                    <path d="M33 18C32.4477 18 32 17.5522 32 17C32 16.4477 32.4477 16 33 16C33.5522 16 34 16.4477 34 17C34 17.5522 33.5522 18 33 18Z"></path>
-                    <path d="M31.3556 9.86619C30.8773 10.1424 30.2658 9.97846 29.9896 9.50017C29.7135 9.02187 29.8773 8.41028 30.3556 8.13414C30.8339 7.858 31.4455 8.02187 31.7217 8.50017C31.9978 8.97846 31.8339 9.59005 31.3556 9.86619Z"></path>
-                    <path d="M30.3556 25.8662C29.8773 25.5901 29.7134 24.9785 29.9896 24.5002C30.2657 24.0219 30.8773 23.858 31.3556 24.1342C31.8339 24.4103 31.9978 25.0219 31.7216 25.5002C31.4455 25.9785 30.8339 26.1424 30.3556 25.8662Z"></path>
-                    <path d="M16 33C16 32.4477 16.4477 32 17 32C17.5523 32 18 32.4477 18 33C18 33.5523 17.5523 34 17 34C16.4477 34 16 33.5523 16 33Z"></path>
-                    <path d="M24.1341 31.3557C23.858 30.8774 24.0219 30.2658 24.5002 29.9896C24.9785 29.7135 25.5901 29.8774 25.8662 30.3557C26.1423 30.834 25.9785 31.4455 25.5002 31.7217C25.0219 31.9978 24.4103 31.834 24.1341 31.3557Z"></path>
-                    <path d="M9.8662 31.3556C9.59005 31.8339 8.97846 31.9978 8.50017 31.7216C8.02188 31.4455 7.858 30.8339 8.13415 30.3556C8.41029 29.8773 9.02188 29.7134 9.50017 29.9896C9.97846 30.2657 10.1424 30.8773 9.8662 31.3556Z"></path>
-                    <path d="M1 18C0.447715 18 -3.44684e-08 17.5523 0 17C3.44684e-08 16.4477 0.447715 16 1 16C1.55228 16 2 16.4477 2 17C2 17.5523 1.55228 18 1 18Z"></path>
-                    <path d="M3.6447 25.8662C3.1664 26.1424 2.55481 25.9785 2.27867 25.5002C2.00253 25.0219 2.1664 24.4103 2.6447 24.1342C3.12299 23.858 3.73458 24.0219 4.01072 24.5002C4.28686 24.9785 4.12299 25.5901 3.6447 25.8662Z"></path>
-                    <path d="M2.6447 9.8662C2.1664 9.59005 2.00253 8.97846 2.27867 8.50017C2.55481 8.02188 3.1664 7.858 3.6447 8.13415C4.12299 8.41029 4.28686 9.02188 4.01072 9.50017C3.73458 9.97846 3.12299 10.1424 2.6447 9.8662Z"></path>
-                    <path d="M16 1C16 0.447715 16.4477 -4.87226e-08 17 0C17.5523 4.87226e-08 18 0.447715 18 1C18 1.55228 17.5523 2 17 2C16.4477 2 16 1.55228 16 1Z"></path>
-                    <path d="M8.13415 3.6447C7.858 3.16641 8.02188 2.55482 8.50017 2.27867C8.97846 2.00253 9.59005 2.16641 9.8662 2.6447C10.1424 3.12299 9.97846 3.73458 9.50017 4.01072C9.02188 4.28687 8.41029 4.12299 8.13415 3.6447Z"></path>
-                  </g>
-                </svg>
-
                 {/* Logo text */}
                 <div className="py-3 group/item">
                   {/* Top-left */}
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -top-2 -left-2 size-[15px] fill-black/10"
+                    className={`absolute -top-3 -left-2 size-[15px]  ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
@@ -91,7 +75,9 @@ export default function Navbar() {
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -top-2 -right-2 size-[15px] fill-black/10"
+                    className={`absolute -top-3 -right-2 size-[15px] ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
@@ -100,7 +86,9 @@ export default function Navbar() {
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -bottom-2 -left-2 size-[15px] fill-black/10"
+                    className={`absolute -bottom-3 -left-2 size-[15px] ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
@@ -109,25 +97,35 @@ export default function Navbar() {
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -bottom-2 -right-2 size-[15px] fill-black/10"
+                    className={`absolute -bottom-3 -right-2 size-[15px] ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
 
-                  <div className="font-medium text-gray-950">Radiant</div>
+                  <Image
+                    src="/logo.webp"
+                    alt="Umbrella ERP Logo"
+                    width={120}
+                    height={40}
+                    className="h-auto w-auto"
+                  />
                 </div>
               </Link>
             </div>
 
             {/* CTA */}
-            <div className="hidden md:block ml-8">
-              <Link href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures">
-                <button className="flex items-center bg-fuchsia-950/35 hover:bg-fuchsia-950/30 text-white px-4 py-2 rounded-full text-sm font-medium transition">
-                  Radiant Raises $100M Series A from Tailwind ventures
-                  <ChevronRight size={16} />
-                </button>
-              </Link>
-            </div>
+            {showCta && (
+              <div className="hidden md:block ml-8">
+                <Link href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures">
+                  <button className="flex items-center bg-[#5b22ccd0] hover:bg-[#5b22cceb] text-white px-4 py-2 rounded-full text-sm font-medium transition">
+                    Discover Tailored ERP & Business Consulting Solutions
+                    <ChevronRight size={16} />
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Desktop Menu */}
@@ -138,13 +136,17 @@ export default function Navbar() {
               return (
                 <div
                   key={link.label}
-                  className="relative group px-4 py-4 hover:bg-black/5 transition rounded"
+                  className={`relative group px-4 py-4 transition rounded ${
+                    isDark ? "hover:bg-black/5" : "hover:bg-[#ececeb]/5"
+                  }`}
                 >
                   {/* Top-left */}
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -top-2 -left-2 size-[15px] fill-black/10"
+                    className={`absolute -top-2 -left-2 size-[15px] ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
@@ -154,7 +156,9 @@ export default function Navbar() {
                     <svg
                       viewBox="0 0 15 15"
                       aria-hidden="true"
-                      className="absolute -top-2 -right-2 size-[15px] fill-black/10"
+                      className={`absolute -top-2 -right-2 size-[15px] ${
+                        isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                      }`}
                     >
                       <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                     </svg>
@@ -164,7 +168,9 @@ export default function Navbar() {
                   <svg
                     viewBox="0 0 15 15"
                     aria-hidden="true"
-                    className="absolute -bottom-2 -left-2 size-[15px] fill-black/10"
+                    className={`absolute -bottom-2 -left-2 size-[15px] ${
+                      isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                    }`}
                   >
                     <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                   </svg>
@@ -174,7 +180,9 @@ export default function Navbar() {
                     <svg
                       viewBox="0 0 15 15"
                       aria-hidden="true"
-                      className="absolute -bottom-2 -right-2 size-[15px] fill-black/10"
+                      className={`absolute -bottom-2 -right-2 size-[15px] ${
+                        isDark ? "fill-black/10" : "fill-[#ececeb]/10"
+                      }`}
                     >
                       <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
                     </svg>
@@ -182,7 +190,9 @@ export default function Navbar() {
 
                   <Link
                     href={link.href}
-                    className="relative z-10 font-medium text-gray-950"
+                    className={`relative z-10 font-medium  ${
+                      isDark ? "text-black" : "text-[#ececeb]"
+                    }`}
                   >
                     {link.label}
                   </Link>

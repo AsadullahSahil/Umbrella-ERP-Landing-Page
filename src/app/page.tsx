@@ -6,16 +6,29 @@ import Outreach from "./components/Outreach";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
 import PartnerLogos from "./components/PartnerLogos";
+import Work from "./components/Work"
 
 export default function HomePage() {
   return (
     <>
       {/* Gradient Wrapper */}
-      <div className="min-h-screen border bg-gradient-to-br bg-linear-115 from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] sm:bg-linear-145 rounded-3xl">
-        <Navbar />
-        <main>
-          <Hero />
-        </main>
+      <div className="relative min-h-screen border rounded-3xl overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero_image.jpg')" }}
+        ></div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* Content */}
+        <div className="relative">
+          <Navbar showCta/>
+          <main>
+            <Hero />
+          </main>
+        </div>
       </div>
 
       {/* Partner Logos (Outside gradient) */}
@@ -29,6 +42,9 @@ export default function HomePage() {
 
       {/* Outreach Section */}
       <Outreach />
+
+      {/* Work */}
+      <Work />
 
       {/* Testimonial Section */}
       <Testimonial />

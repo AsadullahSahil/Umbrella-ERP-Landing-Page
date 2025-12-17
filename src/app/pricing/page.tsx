@@ -1,6 +1,6 @@
 import React from "react";
 import PartnerLogos from "../components/PartnerLogos";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 const pricingPlans = [
   {
@@ -49,7 +49,7 @@ export default function PricingPage() {
           className="absolute -top-[350px] -right-[300px] h-[240px] w-[600px] transform-gpu md:right-0 rotate-[-10deg] rounded-full blur-3xl"
           style={{
             background:
-              "linear-gradient(115deg, #fff1be 28%, #ee87cb 70%, #b060ff)",
+              "linear-gradient(115deg, #fff1be 28%, #6F2DF7 70%, #3E3E3E)",
           }}
         ></div>
 
@@ -68,7 +68,7 @@ export default function PricingPage() {
 
         {/* Pricing Cards */}
         <div className="relative py-24">
-          <div className="absolute inset-x-2 top-48 bottom-0 rounded-3xl ring-1 ring-black/5 ring-inset bg-[linear-gradient(115deg,#fff1be_28%,#ee87cb_60%,#b060ff)] sm:bg-linear-145"></div>
+          <div className="absolute inset-x-2 top-48 bottom-0 rounded-3xl ring-1 ring-black/5 ring-inset bg-[linear-gradient(115deg,#fff1be_28%,#6F2DF7_60%,#ececeb)] sm:bg-linear-145"></div>
 
           <div className="relative px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -245,9 +245,8 @@ export default function PricingPage() {
                   </td>
                   <td colSpan={3} className="p-0 text-right">
                     <Link
+                      href="/"
                       className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                      data-headlessui-state=""
-                      href="#"
                     >
                       Get started
                     </Link>
@@ -262,30 +261,27 @@ export default function PricingPage() {
                     className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
                   >
                     <Link
-                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                      data-headlessui-state=""
-                      href="#"
+                      href="/"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 hover:bg-gray-50"
                     >
                       Get started
                     </Link>
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
                     <Link
-                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                      data-headlessui-state=""
-                      href="#"
+                      href="/"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 hover:bg-gray-50"
                     >
                       Get started
                     </Link>
                   </td>
                   <td className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden">
-                    <a
-                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 data-hover:bg-gray-50"
-                      data-headlessui-state=""
-                      href="#"
+                    <Link
+                      href="/"
+                      className="inline-flex items-center justify-center px-2 py-1 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 data-disabled:bg-transparent data-disabled:opacity-40 hover:bg-gray-50"
                     >
                       Get started
-                    </a>
+                    </Link>
                   </td>
                 </tr>
               </thead>
@@ -884,7 +880,7 @@ export default function PricingPage() {
                         Tina Yards
                       </p>
                       <p className="text-sm/6 font-medium">
-                        <span className="bg-gradient-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#fff1be] via-[#5A22CC] to-[#E5E7EB] bg-clip-text text-transparent">
                           VP of Sales, Protocol
                         </span>
                       </p>

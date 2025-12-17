@@ -48,7 +48,7 @@ export default function BlogPage() {
           className="absolute -top-[350px] -right-[300px] h-[240px] w-[600px] transform-gpu md:right-0 rotate-[-10deg] rounded-full blur-3xl"
           style={{
             background:
-              "linear-gradient(115deg, #fff1be 28%, #ee87cb 70%, #b060ff)",
+              "linear-gradient(115deg, #fff1be 28%, #6F2DF7 70%, #3E3E3E)",
           }}
         ></div>
 

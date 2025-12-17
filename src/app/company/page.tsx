@@ -11,7 +11,7 @@ export default function Company() {
           className="absolute -top-[350px] -right-[300px] h-[240px] w-[600px] transform-gpu md:right-0 rotate-[-10deg] rounded-full blur-3xl"
           style={{
             background:
-              "linear-gradient(115deg, #fff1be 28%, #ee87cb 70%, #b060ff)",
+              "linear-gradient(115deg, #fff1be 28%, #6F2DF7 70%, #3E3E3E)",
           }}
         ></div>
 
@@ -19,11 +19,11 @@ export default function Company() {
         <div className="mt-16 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <h1 className="text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-6xl">
-              Helping companies generate revenue.
+              Powerful Solution For Everyone In The Business Management
             </h1>
             <p className="mt-6 max-w-3xl text-2xl font-medium text-gray-500">
-              We’re on a mission to transform revenue organizations by
-              harnessing vast amounts of illegally acquired customer data.
+              Scalable ERP and strategic consulting that aligns people,
+              processes, and performance.
             </p>
 
             <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
@@ -32,21 +32,16 @@ export default function Company() {
                   Our mission
                 </h2>
                 <p className="mt-6 text-sm/6 text-gray-600">
-                  At Radiant, we are dedicated to transforming the way revenue
-                  organizations source and close deals. Our mission is to
-                  provide our customers with an unfair advantage over both their
-                  competitors and potential customers through insight and
-                  analysis. We’ll stop at nothing to get you the data you need
-                  to close a deal.
+                  Umbrella transforms business potential into performance with
+                  cutting-edge ERP solutions and expert consultancy, driving
+                  operational excellence and strategic growth.
                 </p>
+                <h2 className="text-2xl font-medium tracking-tight mt-6">
+                  Our vision
+                </h2>
                 <p className="mt-8 text-sm/6 text-gray-600">
-                  We’re customer-obsessed — putting the time in to build a
-                  detailed financial picture of every one of our customers so
-                  that we know more about your business than you do. We are in
-                  this together, mostly because we are all implicated in
-                  large-scale financial crime. In our history as a company,
-                  we’ve never lost a customer, because if any one of us talks,
-                  we all go down.
+                  To be the global leader in empowering businesses to excel
+                  through integrated technology and strategic insights.
                 </p>
               </div>
 
@@ -144,32 +139,47 @@ export default function Company() {
         <div className="mt-32 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">
-              Meet the team
+              Who We Are
             </h2>
             <h3 className="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-6xl">
-              Founded by an all-star team.
+              Your trusted partner in ERP and business transformation.
             </h3>
             <p className="mt-6 max-w-3xl text-2xl font-medium text-gray-500">
-              Radiant is founded by two of the best sellers in the business and
-              backed by investors who look the other way.
+              Umbrella ERP delivers integrated, user-friendly ERP systems and
+              expert business consultancy to streamline operations, enhance
+              performance, and support sustainable growth.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
               <div className="max-w-lg">
-                <p className="text-sm/6 text-gray-600">
-                  Years ago, while working as sales associates at rival
-                  companies, Thomas, Ben, and Natalie were discussing a big
-                  client they had all been competing for. Joking about seeing
-                  the terms of each other’s offers, they had an idea: what if
-                  they shared data to win deals and split the commission behind
-                  their companies’ backs? It turned out to be an incredible
-                  success, and that idea became the kernel for Radiant.
+                <h2 className="text-2xl font-medium tracking-tight">
+                  Company Overview
+                </h2>
+                <p className="mt-6 text-sm/6 text-gray-600">
+                  Umbrella ERP, headquartered in Palo Alto, California, is at
+                  the forefront of software development, providing innovative
+                  solutions to meet the evolving needs of the market. Located at
+                  530 Lytton Avenue, 2nd Floor, our USA-based company
+                  specializes in creating cutting-edge ERP systems designed to
+                  enhance business operations across various industries. Our
+                  commitment to excellence and innovation drives us to deliver
+                  tailored software solutions that address the unique challenges
+                  faced by modern enterprises. With a focus on efficiency and
+                  effectiveness, Umbrella ERP is dedicated to helping businesses
+                  achieve their goals and stay ahead in a competitive landscape.
                 </p>
+                <h2 className="text-2xl font-medium tracking-tight mt-6">
+                  Our Company
+                </h2>
                 <p className="mt-8 text-sm/6 text-gray-600">
-                  Today, Radiant transforms revenue organizations by harnessing
-                  illegally acquired customer and competitor data, using it to
-                  provide extraordinary leverage. More than 30,000 companies
-                  rely on Radiant to undercut their competitors and extort their
-                  customers, all through a single integrated platform.
+                  Umbrella ERP is a Silicon Valley-based company that delivers
+                  cutting-edge enterprise resource planning (ERP) software and
+                  comprehensive business consultancy services. Our innovative
+                  solutions are designed to streamline operations, enhance
+                  efficiency, and drive sustainable growth for businesses across
+                  various industries. With a strong commitment to quality and
+                  customer satisfaction, we provide tailored ERP systems that
+                  help organizations optimize their processes, improve
+                  decision-making, and achieve their strategic goals.
                 </p>
                 <div className="mt-6">
                   <Link
@@ -187,15 +197,28 @@ export default function Company() {
                     alt=""
                     fill
                     className="object-cover"
-                    src="https://radiant.tailwindui.com/company/5.jpg"
+                    src="/company.webp"
                   />
                 </div>
               </div>
             </div>
 
             <h3 className="mt-24 font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">
-              The team
+              Meet The team
             </h3>
+            <h3 className="mt-2 text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-6xl">
+              People Powering Your Success
+            </h3>
+
+            <p className="text-sm/6 text-gray-600 mt-6">
+              Founded by a team of industry experts, Umbrella ERP brings decades
+              of experience in business strategy, technology, and operational
+              excellence. Our software is designed to be scalable, flexible, and
+              user-friendly, ensuring that it meets the needs of businesses both
+              large and small. Whether you are looking to automate financial
+              management, streamline supply chains, or improve customer
+              relations, we have the expertise and tools to make it happen.
+            </p>
             <hr className="mt-6 border-t border-gray-200"></hr>
 
             <ul className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -241,8 +264,8 @@ export default function Company() {
                 <Image
                   src="https://radiant.tailwindui.com/investors/remington-schwartz.svg"
                   alt="Remington Schwartz"
-                  width={200} 
-                  height={56} 
+                  width={200}
+                  height={56}
                   className="h-14 w-auto"
                 />
                 <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
@@ -437,9 +460,7 @@ export default function Company() {
                   className="absolute inset-0 object-cover"
                   src="https://radiant.tailwindui.com/testimonials/veronica-winton.jpg"
                 />
-                <div
-                  className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-transparent to-75% ring-1 ring-gray-950/10 ring-inset lg:from-25%"
-                ></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-transparent to-75% ring-1 ring-gray-950/10 ring-inset lg:from-25%"></div>
                 <figure className="relative p-10">
                   <blockquote>
                     <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”']">
@@ -452,7 +473,7 @@ export default function Company() {
                       Veronica Winton
                     </p>
                     <p className="text-sm/6 font-medium">
-                      <span className="bg-gradient-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-[#fff1be] via-[#5A22CC] to-[#E5E7EB] bg-clip-text text-transparent">
                         CSO, Planeteria
                       </span>
                     </p>

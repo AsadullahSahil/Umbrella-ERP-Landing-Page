@@ -5,8 +5,9 @@ import LayoutClient from "./components/LayoutClient";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Radiant",
-  description: "Built from scratch with Next.js and Tailwind",
+  title: "Umbrella ERP | Business & ERP Consulting",
+  description:
+    "Umbrella ERP provides ERP implementation, business consulting, and strategic management solutions.",
 };
 
 export default function RootLayout({

@@ -2,34 +2,34 @@
 
 const outreachCards = [
   {
-    title: "Networking",
-    subtitle: "Sell at the speed of light",
-    text: "Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead.",
-    image: "/screenshots/networking.png",
+    title: "Innovation",
+    subtitle: "Always Moving Forward",
+    text: "We embrace a culture of constant innovation, staying ahead in technology to provide cutting-edge solutions that anticipate and meet businesses' evolving needs.",
+    image: "/innovation.jpg",
     colSpan: "lg:col-span-4",
     rounded: "lg:rounded-tl-4xl",
   },
   {
-    title: "Engagement",
-    subtitle: "Become a thought leader",
-    text: "RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales, helping you build a reputation as a thought leader.",
-    image: "/screenshots/engagement.png",
+    title: "Empowerment",
+    subtitle: "Enabling Better Decisions",
+    text: "We empower organizations to achieve their full potential by delivering user-friendly, intuitive software that enhances efficiency, productivity, and informed decision-making at every level.",
+    image: "/empowerment.jpg",
     colSpan: "lg:col-span-2",
     rounded: "lg:rounded-bl-4xl",
   },
   {
-    title: "Integrations",
-    subtitle: "Meet leads where they are",
-    text: "With thousands of integrations, no one will be able to escape your cold outreach.",
-    image: "/screenshots/engagement.png",
+    title: "Integrity",
+    subtitle: "Trust at the Core",
+    text: "Upholding the highest standards of integrity, we prioritize transparency, honesty, and ethical practices in all our interactions, ensuring trust and reliability in our solutions and partnerships.",
+    image: "/integrity.jpg",
     colSpan: "lg:col-span-2",
     rounded: "lg:rounded-bl-4xl",
   },
   {
-    title: "Meetings",
-    subtitle: "Smart call scheduling",
-    text: "Automatically insert intro calls into your leads' calendars without their consent.",
-    image: "/screenshots/engagement.png",
+    title: "Client Partnership",
+    subtitle: "Built for Long-Term Success",
+    text: "We work closely with our clients as long-term partners, ensuring solutions are aligned with business objectives and deliver measurable value.",
+    image: "/client-partnership.jpg",
     colSpan: "lg:col-span-4",
     rounded: "lg:rounded-tl-4xl",
   },
@@ -41,10 +41,10 @@ export default function Outreach() {
       <section className="mt-2 rounded-3xl bg-gray-900">
         <article className="py-32 px-6 lg:px-8 mx-auto max-w-2xl lg:max-w-7xl">
           <h2 className="font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400">
-            Outreach
+            Our Approach
           </h2>
           <h3 className="mt-2 max-w-3xl text-4xl font-medium tracking-tighter text-pretty text-white sm:text-6xl">
-            Customer outreach has never been easier.
+            Innovation, integrity, and partnership - driving long-term value.
           </h3>
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -56,7 +56,7 @@ export default function Outreach() {
                 {/* Image */}
                 <div className="relative h-80 shrink-0">
                   <div
-                    className="h-80 bg-no-repeat bg-[length:851px_344px]"
+                    className="h-80 bg-no-repeat bg-cover bg-center"
                     style={{ backgroundImage: `url('${card.image}')` }}
                   />
 

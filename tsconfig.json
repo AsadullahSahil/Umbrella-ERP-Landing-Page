@@ -28,8 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/components/CountUp.jsx",
-    "src/app/blog/[slug]/page.jsx",
-    "src/app/blog/data.ts",
+    "src/app/about/[slug]/page.jsx",
+    "src/app/about/data.ts",
     "src/app/(auth)/login/layout.tsx",
     "src/app/(auth)/login/page.tsx"
   ],
